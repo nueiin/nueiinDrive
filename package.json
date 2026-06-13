@@ -1,0 +1,74 @@
+{
+  "name": "nueiinDrive",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "http://localhost:3000",
+  "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^7.1.0",
+    "@fortawesome/react-fontawesome": "^3.1.0",
+    "@tanstack/react-query": "^5.51.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^13.0.0",
+    "@testing-library/user-event": "^13.2.1",
+    "@types/jest": "^27.0.1",
+    "@types/luxon": "^3.4.2",
+    "@types/node": "^16.7.13",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/react-icons": "^3.0.0",
+    "@types/react-modal": "^3.16.3",
+    "@types/styled-components": "^5.1.34",
+    "electron-log": "^5.1.5",
+    "i18next": "^23.11.5",
+    "luxon": "^3.4.4",
+    "react": "^18.3.1",
+    "react-complex-tree": "^2.4.4",
+    "react-dom": "^18.3.1",
+    "react-i18next": "^14.1.2",
+    "react-icons": "^5.2.1",
+    "react-modal": "^3.16.1",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "5.0.1",
+    "react-switch": "^7.0.0",
+    "styled-components": "^6.1.11",
+    "typescript": "^4.4.2",
+    "web-vitals": "^2.1.0",
+    "webdav": "^5.6.0"
+  },
+  "main": "public/electron.js",
+  "homepage": "./",
+  "scripts": {
+    "electron:start": "wait-on tcp:3000 && electron .",
+    "electron:serve": "concurrently -k \"cross-env BROWSER=none npm start\" \"cross-env NODE_ENV=dev npm run electron:start\"",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^30.5.1",
+    "electron-builder": "^24.13.3",
+    "tailwindcss": "^4.1.13",
+    "wait-on": "^7.2.0"
+  }
+}
